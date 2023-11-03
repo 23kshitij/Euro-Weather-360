@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%230058ff%22></rect><path fill=%22%23fff%22 d=%22M72.15 21.33L72.15 21.33Q74.49 22.50 74.90 25.02Q75.30 27.54 73.59 29.61L73.59 29.61Q72.42 31.23 70.58 31.41Q68.73 31.59 66.84 30.69L66.84 30.69Q64.68 29.70 62.30 29.16Q59.91 28.62 57.30 28.62L57.30 28.62Q52.44 28.62 48.62 30.15Q44.79 31.68 42.09 34.52Q39.39 37.35 38.00 41.22Q36.60 45.09 36.60 49.77L36.60 49.77Q36.60 55.26 38.18 59.31Q39.75 63.36 42.54 66.06Q45.33 68.76 49.11 70.07Q52.89 71.37 57.30 71.37L57.30 71.37Q59.73 71.37 62.16 70.92Q64.59 70.47 66.84 69.30L66.84 69.30Q68.73 68.40 70.58 68.67Q72.42 68.94 73.68 70.56L73.68 70.56Q75.48 72.81 74.99 75.20Q74.49 77.58 72.24 78.66L72.24 78.66Q69.90 79.83 67.43 80.60Q64.95 81.36 62.43 81.77Q59.91 82.17 57.30 82.17L57.30 82.17Q50.82 82.17 45.02 80.10Q39.21 78.03 34.67 73.98Q30.12 69.93 27.51 63.86Q24.90 57.78 24.90 49.77L24.90 49.77Q24.90 42.84 27.29 36.99Q29.67 31.14 34.04 26.87Q38.40 22.59 44.34 20.21Q50.28 17.82 57.30 17.82L57.30 17.82Q61.26 17.82 65.04 18.72Q68.82 19.62 72.15 21.33Z%22></path></svg>" />
+    <meta charset="UTF-8">
+    <meta http-equiv=“Pragma” content=”no-cache”>
+    <meta http-equiv=“Expires” content=”-1″>
+    <meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/master.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <title>API Project</title>
+</head>
+<script src="js/main.js"></script>
+
+<body background="bg.jpg">
+
+    <!-- <h1>API Project</h1> -->
+    <div class="all">
+        <div class="text-center">
+            <h1 >Euro Weather 360</h1>
+            <h2 >(European Weather Forecast) </h2>
+            <h3 >Powered by <button type="reset" onclick="location.href='http://www.7timer.info/doc.php?lang=en#civil'">7timer</button> </h3>
+            <h4>Select a City :</h4>
+            <h5>7-days European Weather Forecast</h5>
+            <p id="inputCont">
+                <select name="place" id="placeInput">
+                    <option value="">Select location</option>
+                    <option value="lon=4.904&lat=52.367">Amsterdam, Netherlands</option>
+                    <option value="lon=32.859&lat=39.933">Ankara, Turkey</option>
+                    <option value="lon=12.945&lat=56.134">Åstorp, Sweden</option>
+                    <option value="lon=23.727&lat=37.983">Athens, Greece</option>
+                    <option value="lon=-5.930&lat=54.597">Belfast, Northern Ireland</option>
+                    <option value="lon=2.168&lat=41.387">Barcelona, Spain</option>
+                    <option value="lon=13.405&lat=52.520">Berlin, Germany</option>
+                    <option value="lon=7.447&lat=46.948">Bern, Switzerland</option>
+                    <option value="lon=-2.935&lat=43.263">Bilbao, Spain</option>
+                    <option value="lon=4.357&lat=50.847">Brussels, Belgium</option>
+                    <option value="lon=19.040&lat=47.497">Bucharest, Romania</option>
+                    <option value="lon=18.068&lat=59.329">Budapest, Hungary</option>
+                    <option value="lon=-3.168&lat=51.483">Cardiff, Wales</option>
+                    <option value="lon=6.96&lat=50.937">Cologne, Germany</option>
+                    <option value="lon=12.568&lat=55.676">Copenhagen, Denmark</option>
+                    <option value="lon=-8.475&lat=51.898">Cork, Ireland</option>
+                    <option value="lon=-6.260&lat=53.349">Dublin, Ireland</option>
+                    <option value="lon=-3.188&lat=55.953">Edinburgh, Scotland</option>
+                    <option value="lon=11.255&lat=43.7696">Florence, Italy</option>
+                    <option value="lon=8.682&lat=50.110">Frankfurt, Germany</option>
+                    <option value="lon=6.637&lat=43.254">French Riviera, France</option>
+                    <option value="lon=-16.908&lat=32.650">Funchal, Portugual</option>
+                    <option value="lon=-5.353&lat=36.140">Gibraltar</option>
+                    <option value="lon=11.974&lat=57.708">Gothenburg, Sweden</option>
+                    <option value="lon=9.987&lat=53.548">Hamburg, Germany</option>
+                    <option value="lon=24.938&lat=60.169">Helsinki, Finland</option>
+                    <option value="lon=1.482&lat=39.020">Ibiza, Spain</option>
+                    <option value="lon=30.523&lat=50.450">Kyiv, Ukraine</option>
+                    <option value="lon=10.466&lat=61.115">Lillehammer, Norway</option>
+                    <option value="lon=-9.139&lat=38.722">Lisbon, Portugual</option>
+                    <option value="lon=-0.127&lat=51.507">London, England</option>
+                    <option value="lon=-3.703&lat=40.416">Madrid, Spain</option>
+                    <option value="lon=3.017&lat=39.695">Mallorca, Spain</option>
+                    <option value="lon=-2.242&lat=53.480">Manchester, England </option>
+                    <option value="lon=5.369&lat=43.296">Marseille, France</option>
+                    <option value="lon=-15.586&lat=27.760">Maspalomas, Spain</option>
+                    <option value="lon=9.190&lat=45.464">Milan, Italy</option>
+                    <option value="lon=11.582&lat=48.135">Munich, Germany</option>
+                    <option value="lon=14.268&lat=40.851">Naples, Italy</option>
+                    <option value="lon=-2.417&lat=43.034">Oñati, Spain</option>
+                    <option value="lon=10.752&lat=59.913">Oslo, Norway</option>
+                    <option value="lon=2.352&lat=48.856">Paris, France</option>
+                    <option value="lon=14.437&lat=50.075">Prague, Czech Republic</option>
+                    <option value="lon=-21.942&lat=64.146">Reykjavík, Iceland</option>
+                    <option value="lon=24.603&lat=56.879">Riga, Latvia</option>
+                    <option value="lon=12.496&lat=41.902">Rome, Italy</option>
+                    <option value="lon=-31.127&lat=39.453">Santa Cruz das Flores, Portugual</option>
+                    <option value="lon=-16.251&lat=28.463">Santa Cruz de Tenerife, Spain</option>
+                    <option value="lon=-6.215&lat=57.273">Skye, Scotland</option>
+                    <option value="lon=23.321&lat=42.697">Sofia, Bulgaria</option>
+                    <option value="lon=18.068&lat=59.329">Stockholm, Sweden</option>
+                    <option value="lon=24.753&lat=59.437">Tallinn, Estonia</option>
+                    <option value="lon=16.373&lat=18.208">Vienna, Austria</option>
+                    <option value="lon=21.012&lat=52.229">Warsaw, Poland</option>
+                    <option value="lon=-1.07&lat=53.961">York, England</option>
+                    <option value="lon=8.541&lat=47.376">Zurich, Switzerland</option>
+                </select>
+            </p>
+            <button class="fetch" onclick="GetInfo()" id="fetchbtn">Check Weather</button>
+            <div class="iconsCont" id="iconsCont">
+                <div class="icons">
+                    <p class="weather" id="day1">Day 1</p>
+                    <div class="image">
+                        <img src="./images/windy.png" class="imgClass" id="img1">
+                    </div>
+                    <p class="weather" id="weather1"></p>
+                    <p class="minVal" id="day1Min"></p>
+                    <p class="maxVal" id="day1Max"></p>
+                </div>
+                <div class="icons">
+                    <p class="weather" id="day2">Day 2</p>
+                    <div class="image">
+                        <img src="./images/windy.png" class="imgClass" id="img2">
+                    </div>
+                    <p class="weather" id="weather2"></p>
+                    <p class="minVal" id="day2Min"></p>
+                    <p class="maxVal" id="day2Max"></p>
+                </div>
+                <div class="icons">
+                    <p class="weather" id="day3">Day 3</p>
+                    <div class="image">
+                        <img src="./images/windy.png" class="imgClass" id="img3">
+                    </div>
+                    <p class="weather" id="weather3"></p>
+                    <p class="minVal" id="day3Min"></p>
+                    <p class="maxVal" id="day3Max"></p>
+                </div>
+                <div class="icons">
+                    <p class="weather" id="day4">Day 4</p>
+                    <div class="image">
+                        <img src="./images/windy.png" class="imgClass" id="img4">
+                    </div>
+                    <p class="weather" id="weather4"></p>
+                    <p class="minVal" id="day4Min"></p>
+                    <p class="maxVal" id="day4Max"></p>
+                </div>
+                <div class="icons">
+                    <p class="weather" id="day5">Day 5</p>
+                    <div class="image">
+                        <img src="./images/windy.png" class="imgClass" id="img5">
+                    </div>
+                    <p class="weather" id="weather5"></p>
+                    <p class="minVal" id="day5Min"></p>
+                    <p class="maxVal" id="day5Max"></p>
+                </div>
+                <div class="icons">
+                    <p class="weather" id="day6">Day 6</p>
+                    <div class="image">
+                        <img src="./images/windy.png" class="imgClass" id="img6">
+                    </div>
+                    <p class="weather" id="weather6"></p>
+                    <p class="minVal" id="day6Min"></p>
+                    <p class="maxVal" id="day6Max"></p>
+                </div>
+                <div class="icons">
+                    <p class="weather" id="day7">Day 7</p>
+                    <div class="image">
+                        <img src="./images/windy.png" class="imgClass" id="img7">
+                    </div>
+                    <p class="weather" id="weather7"></p>
+                    <p class="minVal" id="day7Min"></p>
+                    <p class="maxVal" id="day7Max"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p class="copyright">&copy; 2023 Euro Weather 360 All rights reserved.</p>
+    </footer>
+</body>
